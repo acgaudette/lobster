@@ -1,0 +1,5 @@
+#!/bin/sh
+
+clear
+cd dev
+cmake -DCMAKE_BUILD_TYPE=Release && make -j16
