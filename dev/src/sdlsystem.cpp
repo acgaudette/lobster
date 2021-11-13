@@ -291,6 +291,8 @@ string SDLInit(string_view title, const int2 &desired_screensize, InitFlags flag
 
     // FIXME: for emscripten, this picks screen size, not browser window size, and doesn't resize.
     #ifdef PLATFORM_ES3
+        screensize = int2(desired_screensize.x, desired_screensize.y);
+/*
         landscape = desired_screensize.x >= desired_screensize.y;
         int modes = SDL_GetNumDisplayModes(0);
         screensize = int2(320, 200);
@@ -302,6 +304,7 @@ string SDLInit(string_view title, const int2 &desired_screensize, InitFlags flag
                 screensize = int2(mode.w, mode.h);
             }
         }
+*/
         LOG_INFO("chosen resolution: ", screensize.x, " ", screensize.y);
         LOG_INFO("SDL about to create window...");
         auto wflags = SDL_WINDOW_OPENGL | SDL_WINDOW_SHOWN | SDL_WINDOW_BORDERLESS;
