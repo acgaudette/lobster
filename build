@@ -2,4 +2,4 @@
 
 clear
 cd dev
-cmake -DCMAKE_BUILD_TYPE=Release && make -j16
+cmake -DLOBSTER_TOCPP=OFF -DCMAKE_BUILD_TYPE=Release . && make -j16

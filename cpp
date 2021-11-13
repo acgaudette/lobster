@@ -10,8 +10,7 @@ INP=
 echo cont? && read -r $INP
 
 cd dev
-cmake -DLOBSTER_TOCPP=ON -DCMAKE_BUILD_TYPE=Release .
-make -j16
+cmake -DLOBSTER_TOCPP=ON -DCMAKE_BUILD_TYPE=Release . && make -j16
 
 cd ..
 ls bin/compiled*
