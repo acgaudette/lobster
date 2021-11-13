@@ -92,7 +92,8 @@ EFLAGS= -s WASM=1 -s USE_WEBGL2=1 -s FULL_ES3=1 \
 		-s ALLOW_MEMORY_GROWTH=1 -o lobster.html --preload-file assets@/ \
 		-s DEMANGLE_SUPPORT=1 --emrun --profiling-funcs \
 		-s BINARYEN_IGNORE_IMPLICIT_TRAPS=1 \
-		-s ASYNCIFY -s ASYNCIFY_IGNORE_INDIRECT
+		-s ASYNCIFY -s ASYNCIFY_IGNORE_INDIRECT \
+		--shell-file shell.html
 		#-s BINARYEN_EXTRA_PASSES='"--always-inline-max-function-size=5,--flexible-inline-max-function-size=50,--one-caller-inline-max-function-size=200"'
 
 #EMCC_DEBUG=1
