@@ -274,11 +274,10 @@ string SDLInit(string_view title, const int2 &desired_screensize, InitFlags flag
         SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_ES);
     #else
         SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
-        #if defined(__APPLE__) || defined(_WIN32)
-            SDL_GL_SetAttribute(SDL_GL_MULTISAMPLEBUFFERS, samples > 1);
-            SDL_GL_SetAttribute(SDL_GL_MULTISAMPLESAMPLES, samples);
-        #endif
     #endif
+
+    SDL_GL_SetAttribute(SDL_GL_MULTISAMPLEBUFFERS, samples > 1);
+    SDL_GL_SetAttribute(SDL_GL_MULTISAMPLESAMPLES, samples);
 
     //SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE, 0);      // set this if we're in 2D mode for speed on mobile?
     SDL_GL_SetAttribute(SDL_GL_RETAINED_BACKING, 1);    // because we redraw the screen each frame
