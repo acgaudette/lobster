@@ -6,3 +6,5 @@ my changes (roughly)
 - add shell (html) file to emscripten build
 - expand box2d api
 - add tons of glue shell to automate stuff
+
+./distribute <.../main.lobster>
